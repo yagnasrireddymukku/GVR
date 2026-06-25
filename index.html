@@ -1,261 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GVR Granite &amp; Marbles — All Kinds of Granite &amp; Marble Supplier | Andhra Pradesh</title>
-<meta name="description" content="GVR Granite & Marbles — supplier of all kinds of granite and marble. Specialists in Steel Gray and Black Pearl granite. Based in Ballikurava, Andhra Pradesh. Get a quote on WhatsApp." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chamundeswari Granite Industries — Premium Granite Supplier, Andhra Pradesh</title>
+  <meta name="description" content="Chamundeswari Granite Industries supplies premium Steel Grey, Black Pearl, Tiger Black, and other granites in multiple finishes from Chilakaluripet, Andhra Pradesh. GSTIN: 37AAJFC9018K1Z3."/>
+  <meta name="keywords" content="granite supplier, steel grey granite, black pearl granite, tiger black granite, Chilakaluripet, Andhra Pradesh, granite slabs, natural stone"/>
+  <meta name="author" content="Chamundeswari Granite Industries"/>
+  <meta property="og:title" content="Chamundeswari Granite Industries"/>
+  <meta property="og:description" content="Premium granite supplier from Andhra Pradesh — Steel Grey, Black Pearl, Tiger Black and more."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://chamundeswarigranite.com/"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F0F1A'/><text y='24' x='4' font-size='22' font-weight='900' font-family='Georgia' fill='%23C9A84C'>C</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Chamundeswari Granite Industries",
+    "description": "Premium natural granite supplier in Andhra Pradesh",
+    "url": "https://chamundeswarigranite.com",
+    "telephone": ["+91-6300346255", "+91-9892567833"],
+    "email": "sreeramreddy00@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Murikipudi (Vil), Vemavaram Road",
+      "addressLocality": "Chilakaluripet",
+      "addressRegion": "Andhra Pradesh",
+      "addressCountry": "IN"
+    },
+    "taxID": "37AAJFC9018K1Z3",
+    "founders": [
+      {"@type": "Person", "name": "G. Vishnu Vardhan Reddy"},
+      {"@type": "Person", "name": "K. Sreeram Reddy"}
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="GVR Granite and Marbles home">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="38" height="38" fill="none">
-          <rect x="2" y="2" width="36" height="36" rx="2" stroke="#c8202a" stroke-width="2"/>
-          <path d="M8 26 L20 8 L32 26 Z" fill="#c8202a" opacity="0.9"/>
-          <rect x="8" y="28" width="24" height="4" fill="#7d848e"/>
+<!-- PRELOADER -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader-logo">CHAMUNDESWARI<br/><span style="font-size:0.55em;letter-spacing:0.25em;color:var(--mist);">GRANITE INDUSTRIES</span></div>
+  <div class="preloader-bar-wrap"><div class="preloader-bar"></div></div>
+</div>
+
+<!-- NAV OVERLAY -->
+<div id="navOverlay" class="nav-overlay"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand" aria-label="Chamundeswari Granite Industries Home">
+    <div class="nav-brand-icon">C</div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Chamundeswari</span>
+      <span class="nav-brand-sub">Granite Industries</span>
+    </div>
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="nav-cta">Get a Quote</a>
+  </div>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div id="navDrawer" class="nav-drawer" role="dialog" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="products.html">Our Products</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html" class="drawer-cta">Get a Quote →</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-bg">
+    <canvas id="particleCanvas" class="hero-particles"></canvas>
+    <div class="hero-grain" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <span class="hero-eyebrow">Andhra Pradesh's Premium Granite</span>
+
+      <h1 class="hero-title">
+        Where Earth's<br/>
+        <span class="accent">Finest Stone</span><br/>
+        Meets <span class="outline-text">Craft</span>
+      </h1>
+
+      <p class="hero-desc">
+        Chamundeswari Granite Industries delivers exceptional natural granite—Steel Grey, Black Pearl, Tiger Black and more—in Polish, Laputra, Leather, and Flaming finishes. Trusted by builders, architects and designers across India.
+      </p>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num" data-counter data-target="500" data-suffix="+">500+</div>
+          <div class="hero-stat-label">Projects Done</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-counter data-target="20" data-suffix="+">20+</div>
+          <div class="hero-stat-label">Granite Varieties</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-counter data-target="15" data-suffix="Y">15Y</div>
+          <div class="hero-stat-label">Experience</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-primary">
+          Explore Products
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Get a Free Quote</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <!-- SVG granite simulation banner -->
+        <svg width="100%" height="100%" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;">
+          <defs>
+            <filter id="granite-texture">
+              <feTurbulence type="fractalNoise" baseFrequency="0.04 0.06" numOctaves="6" seed="5" result="noise"/>
+              <feColorMatrix type="saturate" values="0.3" in="noise" result="desatNoise"/>
+              <feBlend in="SourceGraphic" in2="desatNoise" mode="multiply" result="blended"/>
+              <feComposite in="blended" in2="SourceGraphic" operator="in"/>
+            </filter>
+            <filter id="g2">
+              <feTurbulence type="turbulence" baseFrequency="0.02 0.04" numOctaves="4" seed="12"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0.3  0 0 0 0 0.3  0 0 0 0 0.35  0 0 0 1 0"/>
+            </filter>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#9A7A2E"/>
+              <stop offset="50%" stop-color="#C9A84C"/>
+              <stop offset="100%" stop-color="#E8C97A"/>
+            </linearGradient>
+            <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A1A2E"/>
+              <stop offset="100%" stop-color="#0F0F1A"/>
+            </linearGradient>
+          </defs>
+          <!-- Base dark stone -->
+          <rect width="600" height="450" fill="#1A1A2E"/>
+          <!-- Noise layer 1 -->
+          <rect width="600" height="450" opacity="0.6">
+            <animate attributeName="opacity" values="0.5;0.65;0.5" dur="8s" repeatCount="indefinite"/>
+            <filter>
+              <feTurbulence type="fractalNoise" baseFrequency="0.08 0.12" numOctaves="5" seed="3"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.25  0 0 0 0 0.32  0 0 0 25 -12"/>
+            </filter>
+          </rect>
+          <!-- Granite veins -->
+          <path d="M0,180 Q150,140 300,200 T600,160" stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.25"/>
+          <path d="M0,280 Q200,250 350,310 T600,270" stroke="#C9A84C" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M100,0 Q180,100 140,250 T200,450" stroke="#9A9AB0" stroke-width="0.5" fill="none" opacity="0.15"/>
+          <path d="M380,0 Q320,150 400,300 T360,450" stroke="#9A9AB0" stroke-width="0.4" fill="none" opacity="0.12"/>
+          <path d="M0,90 Q80,120 160,80 T320,110 T480,85 T600,100" stroke="#E8C97A" stroke-width="0.4" fill="none" opacity="0.12"/>
+          <!-- Speckle layer -->
+          <rect width="600" height="450" opacity="0.4">
+            <filter>
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="99"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0.78  0 0 0 0 0.66  0 0 0 0 0.30  0 0 0 15 -12"/>
+            </filter>
+          </rect>
+          <!-- Overlay gradient for depth -->
+          <rect width="600" height="450" fill="url(#darkGrad)" opacity="0.45"/>
+          <!-- Text overlay on granite -->
+          <text x="50%" y="42%" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="700" fill="#C9A84C" opacity="0.9">STEEL GREY</text>
+          <text x="50%" y="52%" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#E8C97A" opacity="0.7" letter-spacing="4">PREMIUM GRANITE</text>
+          <text x="50%" y="62%" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#9A9AB0" opacity="0.6" letter-spacing="2">POLISH · LEATHER · FLAMING</text>
+          <!-- Bottom shimmer -->
+          <rect y="380" width="600" height="70" fill="url(#goldGrad)" opacity="0.08"/>
         </svg>
-      </span>
-      <span class="brand__name">GV<span>R</span> Granite &amp; Marbles
-        <span class="brand__sub">All Kinds of Granite &amp; Marble Supplier</span>
-      </span>
-    </a>
 
-    <button class="nav__toggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><span></span></button>
-
-    <ul class="nav__links" id="navLinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="btn btn--wa btn--wa-mobile" href="https://wa.me/916300346255?text=Hello%20GVR%20Granite%20%26%20Marbles%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp Us</a></li>
-    </ul>
-
-    <div class="nav__cta">
-      <a class="btn btn--wa" href="https://wa.me/916300346255?text=Hello%20GVR%20Granite%20%26%20Marbles%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">Get a Quote</a>
+        <div class="hero-img-badge">
+          <div class="hero-badge-num">GST</div>
+          <div class="hero-badge-txt">Verified Business</div>
+        </div>
+      </div>
     </div>
   </div>
-</header>
 
-<!-- ============ HERO ============ -->
-<section class="slab section" style="padding-block: clamp(72px,11vw,150px);">
-  <svg class="slab__veins" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g stroke="#9aa3ad" fill="none" stroke-width="1.2" opacity="0.55">
-      <path d="M-20 120 C 220 60, 380 220, 560 150 S 900 60, 1240 180"/>
-      <path d="M-20 360 C 260 300, 420 460, 640 380 S 980 300, 1240 420"/>
-      <path d="M120 -20 C 200 180, 60 320, 220 520 S 180 640, 260 640"/>
-      <path d="M820 -20 C 900 160, 760 300, 940 500"/>
-    </g>
-    <g stroke="#c8202a" fill="none" stroke-width="0.8" opacity="0.28">
-      <path d="M-20 240 C 300 200, 500 300, 760 250 S 1000 200, 1240 280"/>
-    </g>
-  </svg>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
 
-  <div class="wrap" style="position:relative;">
-    <p class="eyebrow reveal">Vikhyath Industries · Andhra Pradesh</p>
-    <h1 class="h-display reveal" style="max-width: 18ch;">Stone that holds a building together.</h1>
-    <p class="lead reveal" style="margin-top: 24px;">
-      GVR Granite &amp; Marbles supplies all kinds of granite and marble, cut and finished
-      for homes, builders and projects across the region. We are specialists in
-      <strong style="color:#fff;">Steel Gray</strong> and <strong style="color:#fff;">Black Pearl</strong> granite —
-      quarried strong, polished clean, delivered on time.
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-dot"></span> Steel Grey Granite</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Black Pearl Granite</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Tiger Black Granite</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Light Polish Finish</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Dark Polish Finish</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Laputra Finish</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Leather Finish</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Flaming Finish</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Chilakaluripet, A.P.</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> GSTIN: 37AAJFC9018K1Z3</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     FEATURED PRODUCTS
+     ============================================================ -->
+<section class="section products-bg" id="products">
+  <div class="section-header center reveal">
+    <span class="section-label">Our Collection</span>
+    <h2 class="section-title">Premium Granite <span class="gold italic">Varieties</span></h2>
+    <div class="gold-divider" style="margin:0.8rem auto 1rem;"></div>
+    <p class="section-desc">
+      Sourced from the finest quarries of Andhra Pradesh, our granites are available in multiple finishes to suit every architectural vision.
     </p>
-    <div class="btnrow reveal" style="margin-top: 34px;">
-      <a class="btn btn--lg" href="contact.html">Request a Quote</a>
-      <a class="btn btn--ghost btn--lg" href="products.html">View Our Stones</a>
-    </div>
-
-    <div class="stats mt-l reveal" style="margin-top: clamp(48px,7vw,80px);">
-      <div><div class="stat__num" data-count="2">0</div><div class="stat__lbl">Signature Granites</div></div>
-      <div><div class="stat__num" data-count="20" data-suffix="+">0</div><div class="stat__lbl">Stone Varieties</div></div>
-      <div><div class="stat__num" data-count="100" data-suffix="%">0</div><div class="stat__lbl">GST-Registered Supply</div></div>
-      <div><div class="stat__num">523301</div><div class="stat__lbl">Ballikurava, AP</div></div>
-    </div>
   </div>
-</section>
 
-<!-- ============ INTRO / WHY ============ -->
-<section class="section">
-  <div class="wrap split">
-    <div class="reveal">
-      <p class="eyebrow">Who we are</p>
-      <h2 class="h-section">A direct line<br>from quarry to site.</h2>
-      <p class="lead" style="margin-top:18px;">
-        Run under Vikhyath Industries by proprietor Ganji Vishnu Vardhan Reddy, GVR
-        Granite &amp; Marbles is a supplier you can buy from with confidence — registered,
-        reachable, and straightforward about sizes, finishes and rates.
-      </p>
-      <ul class="chips mt-m">
-        <li>Slabs &amp; tiles</li>
-        <li>Polished &amp; honed finishes</li>
-        <li>Custom sizing</li>
-        <li>Bulk &amp; project supply</li>
-        <li>Builder pricing</li>
-      </ul>
-      <a class="btn btn--dark mt-m" href="about.html">More about us</a>
-    </div>
-    <div class="split__media reveal">
-      <div class="swatch stone--steel-gray swatch--live" role="img" aria-label="Steel Gray granite texture"></div>
-    </div>
-  </div>
-</section>
+  <div class="products-grid">
 
-<hr class="divider-cut" />
-
-<!-- ============ SPECIALTIES ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="center" style="max-width:720px;margin-inline:auto;">
-      <p class="eyebrow center reveal">Our specialty</p>
-      <h2 class="h-section reveal">Two granites we know better than anyone</h2>
-      <p class="lead reveal" style="margin:16px auto 0;">
-        These are the stones we move every week. We know how they cut, where they shine,
-        and what they should cost.
-      </p>
-    </div>
-
-    <div class="grid grid--2 mt-l">
-      <article class="card reveal">
-        <div class="swatch stone--steel-gray" role="img" aria-label="Steel Gray granite"></div>
-        <div class="card__body">
-          <span class="card__meta">Signature granite</span>
-          <h3 class="card__title">Steel Gray Granite</h3>
-          <p class="card__text">A clean, even grey with fine speckle — the dependable choice for kitchen
-            countertops, flooring and staircases. Hard-wearing and easy to match across a whole project.</p>
-          <div class="card__foot">
-            <button class="btn" data-enquire="Steel Gray Granite">Enquire about this stone</button>
-          </div>
+    <!-- Steel Grey -->
+    <article class="product-card reveal delay-1" data-category="granite">
+      <div class="product-img">
+        <div class="product-img-inner granite-thumb">
+          <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#3A3A45"/>
+            <rect width="400" height="300" opacity="0.8">
+              <filter><feTurbulence type="fractalNoise" baseFrequency="0.06 0.08" numOctaves="5" seed="1"/><feColorMatrix type="matrix" values="0 0 0 0 0.3 0 0 0 0 0.3 0 0 0 0 0.35 0 0 0 20 -8"/></filter>
+            </rect>
+            <path d="M0,120 Q100,95 200,130 T400,110" stroke="#C9A84C" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M0,200 Q130,175 250,210 T400,185" stroke="#9A9AB0" stroke-width="0.4" fill="none" opacity="0.2"/>
+            <rect width="400" height="300" fill="#3A3A50" opacity="0.3"/>
+          </svg>
         </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="swatch stone--black-pearl" role="img" aria-label="Black Pearl granite"></div>
-        <div class="card__body">
-          <span class="card__meta">Signature granite</span>
-          <h3 class="card__title">Black Pearl Granite</h3>
-          <p class="card__text">Deep near-black with a soft pearly shimmer that catches the light. A premium look
-            for feature walls, vanity tops and elevation cladding that wants to feel solid and expensive.</p>
-          <div class="card__foot">
-            <button class="btn" data-enquire="Black Pearl Granite">Enquire about this stone</button>
-          </div>
+        <span class="product-badge">Popular</span>
+      </div>
+      <div class="product-body">
+        <div class="product-type">Natural Granite</div>
+        <h3 class="product-name">Steel Grey</h3>
+        <p class="product-desc">Elegant grey tones with subtle crystalline patterns. Ideal for flooring, countertops, and façades.</p>
+        <div class="product-finishes">
+          <span class="finish-tag">Polish</span>
+          <span class="finish-tag">Leather</span>
+          <span class="finish-tag">Flaming</span>
         </div>
-      </article>
+      </div>
+    </article>
+
+    <!-- Black Pearl -->
+    <article class="product-card reveal delay-2" data-category="granite">
+      <div class="product-img">
+        <div class="product-img-inner granite-thumb">
+          <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#121218"/>
+            <rect width="400" height="300" opacity="0.9">
+              <filter><feTurbulence type="fractalNoise" baseFrequency="0.05 0.07" numOctaves="6" seed="7"/><feColorMatrix type="matrix" values="0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.15 0 0 0 22 -10"/></filter>
+            </rect>
+            <circle cx="180" cy="140" r="2" fill="#E8C97A" opacity="0.6"/>
+            <circle cx="250" cy="90" r="1.5" fill="#E8C97A" opacity="0.5"/>
+            <circle cx="120" cy="200" r="1.8" fill="#C9A84C" opacity="0.5"/>
+            <circle cx="320" cy="160" r="1.2" fill="#E8C97A" opacity="0.4"/>
+            <circle cx="80" cy="120" r="1" fill="#C9A84C" opacity="0.4"/>
+            <rect width="400" height="300" fill="#0A0A12" opacity="0.4"/>
+          </svg>
+        </div>
+        <span class="product-badge">Luxury</span>
+      </div>
+      <div class="product-body">
+        <div class="product-type">Natural Granite</div>
+        <h3 class="product-name">Black Pearl</h3>
+        <p class="product-desc">Deep black base with shimmering golden flecks. A timeless choice for luxury interiors and monuments.</p>
+        <div class="product-finishes">
+          <span class="finish-tag">Mirror Polish</span>
+          <span class="finish-tag">Laputra</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tiger Black -->
+    <article class="product-card reveal delay-3" data-category="granite">
+      <div class="product-img">
+        <div class="product-img-inner granite-thumb">
+          <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#1A1410"/>
+            <rect width="400" height="300" opacity="0.85">
+              <filter><feTurbulence type="turbulence" baseFrequency="0.03 0.05" numOctaves="5" seed="15"/><feColorMatrix type="matrix" values="0 0 0 0 0.25 0 0 0 0 0.18 0 0 0 0 0.1 0 0 0 18 -7"/></filter>
+            </rect>
+            <path d="M30,60 Q120,40 180,90 T300,70 T400,60" stroke="#C9A84C" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M0,160 Q80,130 170,180 T350,155 T450,160" stroke="#9A7A2E" stroke-width="1" fill="none" opacity="0.35"/>
+            <path d="M60,240 Q160,210 240,260 T420,235" stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.3"/>
+            <rect width="400" height="300" fill="#1A1410" opacity="0.35"/>
+          </svg>
+        </div>
+        <span class="product-badge">Exclusive</span>
+      </div>
+      <div class="product-body">
+        <div class="product-type">Natural Granite</div>
+        <h3 class="product-name">Tiger Black</h3>
+        <p class="product-desc">Bold gold veining across a rich black canvas. Makes a dramatic statement in any space.</p>
+        <div class="product-finishes">
+          <span class="finish-tag">Polish</span>
+          <span class="finish-tag">Flaming</span>
+          <span class="finish-tag">Leather</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div style="text-align:center; margin-top:3rem;" class="reveal">
+    <a href="products.html" class="btn btn-outline">View All Granite Varieties →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US
+     ============================================================ -->
+<section class="section-full features-bg" id="features">
+  <div class="section" style="padding-top:0;padding-bottom:0;">
+    <div class="section-header center reveal">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Built on <span class="gold italic">Trust</span> &amp; Quality</h2>
+      <div class="gold-divider" style="margin:0.8rem auto 0;"></div>
+    </div>
+
+    <div class="features-grid" style="margin-top:3rem;">
+
+      <div class="feature-card reveal delay-1">
+        <div class="feature-icon">🪨</div>
+        <div class="feature-title">Direct from Quarry</div>
+        <p class="feature-desc">We source granite directly from certified quarries in Andhra Pradesh, ensuring authenticity and the best price-to-quality ratio.</p>
+      </div>
+
+      <div class="feature-card reveal delay-2">
+        <div class="feature-icon">✂️</div>
+        <div class="feature-title">Custom Cutting &amp; Sizing</div>
+        <p class="feature-desc">Every slab can be custom-cut to your exact specifications. We handle countertops, flooring tiles, monuments, and façade panels.</p>
+      </div>
+
+      <div class="feature-card reveal delay-3">
+        <div class="feature-icon">🔖</div>
+        <div class="feature-title">GST Registered</div>
+        <p class="feature-desc">Fully GST-compliant business. GSTIN: 37AAJFC9018K1Z3. Proper invoicing and documentation for all commercial orders.</p>
+      </div>
+
+      <div class="feature-card reveal delay-4">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-title">Pan-India Delivery</div>
+        <p class="feature-desc">Strategic location in Vemavaram Road, Chilakaluripet enables efficient logistics and timely delivery across all Indian states.</p>
+      </div>
+
+      <div class="feature-card reveal delay-5">
+        <div class="feature-icon">🎨</div>
+        <div class="feature-title">Multiple Finishes</div>
+        <p class="feature-desc">Polish, Light &amp; Dark Polish, Laputra, Leather, and Flaming Finished — every texture available to match your design intent.</p>
+      </div>
+
+      <div class="feature-card reveal delay-6">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-title">Dedicated Support</div>
+        <p class="feature-desc">Our founders G. Vishnu Vardhan Reddy and K. Sreeram Reddy personally oversee quality and client relationships.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ============ PROCESS ============ -->
-<section class="slab section">
-  <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <p class="eyebrow">How an order works</p>
-        <h2 class="h-section" style="color:var(--marble);">From your call<br>to your site.</h2>
-        <p class="lead" style="color:var(--mist);margin-top:16px;">
-          No long forms, no runaround. Tell us the stone and the quantity, and we handle the rest.
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section class="section" id="process">
+  <div class="section-header center reveal">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Simple <span class="gold italic">4-Step</span> Process</h2>
+    <div class="gold-divider" style="margin:0.8rem auto 0;"></div>
+  </div>
+
+  <div class="process-track" style="margin-top:4rem;">
+    <div class="process-step reveal delay-1">
+      <div class="process-num">01</div>
+      <div class="process-step-title">Choose Your Stone</div>
+      <p class="process-step-desc">Browse our gallery and select the granite variety and finish that suits your project.</p>
+    </div>
+    <div class="process-step reveal delay-2">
+      <div class="process-num">02</div>
+      <div class="process-step-title">Share Requirements</div>
+      <p class="process-step-desc">Send us your dimensions, quantity, and finish preferences via enquiry form or WhatsApp.</p>
+    </div>
+    <div class="process-step reveal delay-3">
+      <div class="process-num">03</div>
+      <div class="process-step-title">Get a Quote</div>
+      <p class="process-step-desc">Receive a detailed competitive quote with samples if needed, within 24 hours.</p>
+    </div>
+    <div class="process-step reveal delay-4">
+      <div class="process-num">04</div>
+      <div class="process-step-title">Delivery &amp; Install</div>
+      <p class="process-step-desc">We handle safe packing and coordinate delivery anywhere across India.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT SNIPPET
+     ============================================================ -->
+<section class="section-full" style="background:var(--deep);" id="about-home">
+  <div class="section">
+    <div class="about-layout">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img-main">
+          <svg width="100%" height="100%" viewBox="0 0 400 530" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="530" fill="#252535"/>
+            <rect width="400" height="530" opacity="0.85">
+              <filter><feTurbulence type="fractalNoise" baseFrequency="0.04 0.06" numOctaves="6" seed="22"/><feColorMatrix type="matrix" values="0 0 0 0 0.28 0 0 0 0 0.28 0 0 0 0 0.33 0 0 0 25 -12"/></filter>
+            </rect>
+            <path d="M0,200 Q100,160 200,220 T400,180" stroke="#C9A84C" stroke-width="0.7" fill="none" opacity="0.25"/>
+            <path d="M0,350 Q150,310 280,370 T400,340" stroke="#C9A84C" stroke-width="0.5" fill="none" opacity="0.2"/>
+            <rect width="400" height="530" fill="url(#aboutGrad)" opacity="0.4"/>
+            <defs><linearGradient id="aboutGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A1A2E" stop-opacity="0.7"/><stop offset="100%" stop-color="#1A1A2E" stop-opacity="0.3"/></linearGradient></defs>
+            <text x="50%" y="45%" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#C9A84C" opacity="0.6">GRANITE</text>
+            <text x="50%" y="53%" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#9A9AB0" opacity="0.5" letter-spacing="3">EXCELLENCE</text>
+          </svg>
+        </div>
+        <div class="about-img-accent">
+          <svg width="100%" height="100%" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="220" fill="#1A1A2E"/>
+            <rect width="220" height="220" opacity="0.9">
+              <filter><feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="4" seed="33"/><feColorMatrix type="matrix" values="0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 20 -9"/></filter>
+            </rect>
+            <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="900" fill="#C9A84C" opacity="0.8">15+</text>
+            <text x="50%" y="62%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.7" letter-spacing="2">YEARS EXP</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="about-right reveal-right">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Quarried from the <span class="gold italic">Heart</span> of Andhra</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc" style="margin-top:1rem;">
+          Founded by G. Vishnu Vardhan Reddy and K. Sreeram Reddy, Chamundeswari Granite Industries has been a cornerstone of the natural stone industry in Andhra Pradesh. Based at Murikipudi Village on Vemavaram Road, Chilakaluripet, we combine deep geological knowledge with modern cutting and finishing technology.
         </p>
-        <a class="btn btn--wa mt-m" href="https://wa.me/916300346255?text=Hello%2C%20I%27d%20like%20to%20start%20an%20order." target="_blank" rel="noopener">Start on WhatsApp</a>
-      </div>
-      <div class="reveal">
-        <ul class="feature-list" style="--c:var(--marble);">
-          <li><span class="fnum">01</span><div><h4 style="color:var(--marble);">Tell us what you need</h4><p style="color:var(--mist);">Share the stone, finish, sizes and quantity — a quick message is enough.</p></div></li>
-          <li><span class="fnum">02</span><div><h4 style="color:var(--marble);">We quote clearly</h4><p style="color:var(--mist);">You get rates, availability and timelines with nothing hidden.</p></div></li>
-          <li><span class="fnum">03</span><div><h4 style="color:var(--marble);">Cut &amp; polished</h4><p style="color:var(--mist);">Stone is finished to your spec at our facility under Vikhyath Industries.</p></div></li>
-          <li><span class="fnum">04</span><div><h4 style="color:var(--marble);">Delivered</h4><p style="color:var(--mist);">Dispatched to your site, ready to install.</p></div></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============ RANGE PREVIEW ============ -->
-<section class="section">
-  <div class="wrap">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px;">
-      <div class="reveal">
-        <p class="eyebrow">All kinds of stone</p>
-        <h2 class="h-section">Beyond our specialties</h2>
-      </div>
-      <a class="btn btn--dark reveal" href="products.html">See the full range</a>
-    </div>
-
-    <div class="gallery-grid mt-l">
-      <figure class="reveal"><div class="swatch stone--tan-brown"></div><figcaption>Tan Brown Granite</figcaption></figure>
-      <figure class="reveal"><div class="swatch stone--galaxy"></div><figcaption>Black Galaxy Granite</figcaption></figure>
-      <figure class="reveal"><div class="swatch stone--kashmir-white"></div><figcaption>Kashmir White Granite</figcaption></figure>
-      <figure class="reveal"><div class="swatch stone--makrana"></div><figcaption>Makrana White Marble</figcaption></figure>
-      <figure class="reveal"><div class="swatch stone--green"></div><figcaption>Green Marble</figcaption></figure>
-      <figure class="reveal"><div class="swatch stone--statuario"></div><figcaption>Statuario Marble</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA BAND ============ -->
-<section class="slab section">
-  <div class="wrap cta-band">
-    <p class="eyebrow center reveal">Ready when you are</p>
-    <h2 class="h-section reveal">Get a quote for your project today</h2>
-    <p class="lead reveal">Message us with your stone and quantity. We reply quickly with rates and availability.</p>
-    <div class="btnrow reveal" style="justify-content:center;">
-      <a class="btn btn--wa btn--lg" href="https://wa.me/916300346255?text=Hello%20GVR%20Granite%20%26%20Marbles%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp +91 6300 346 255</a>
-      <a class="btn btn--ghost btn--lg" href="tel:+916300346255">Call now</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:14px;">
-          <span class="brand__name" style="font-size:1.3rem;">GV<span style="color:var(--garnet-bright);">R</span> Granite &amp; Marbles</span>
+        <div class="about-list">
+          <div class="about-list-item">
+            <div class="about-check">✓</div>
+            <span>Authorized quarry operations with verified GSTIN 37AAJFC9018K1Z3</span>
+          </div>
+          <div class="about-list-item">
+            <div class="about-check">✓</div>
+            <span>State-of-the-art cutting, polishing, and finishing equipment</span>
+          </div>
+          <div class="about-list-item">
+            <div class="about-check">✓</div>
+            <span>Over 500 successful projects — residential, commercial, and monumental</span>
+          </div>
+          <div class="about-list-item">
+            <div class="about-check">✓</div>
+            <span>Serving architects, builders, interior designers, and contractors</span>
+          </div>
         </div>
-        <p class="muted" style="max-width:38ch;">All kinds of granite and marble supplier. Specialists in Steel Gray &amp; Black Pearl granite, operating under Vikhyath Industries.</p>
-        <p class="gstin muted" style="margin-top:14px;">GSTIN: 37AXGPN9721Q1ZL</p>
+
+        <div class="about-gstin">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          GSTIN: 37AAJFC9018K1Z3
+        </div>
+
+        <a href="about.html" class="btn btn-primary" style="margin-top:2rem;display:inline-flex;">
+          Learn More About Us →
+        </a>
       </div>
-      <div>
-        <h4>Explore</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <div class="footer-contact">
-          <div><strong>Ganji Vishnu Vardhan Reddy</strong><br>Proprietor</div>
-          <a href="tel:+916300346255">+91 6300 346 255</a>
-          <a href="mailto:vishnu.v.ganji@gmail.com">vishnu.v.ganji@gmail.com</a>
-          <div>C/o Vikhyath Industries,<br>Uppamaguluru, Ballikurava,<br>Andhra Pradesh – 523301</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="section-full testimonials-bg" id="testimonials">
+  <div class="section">
+    <div class="section-header center reveal">
+      <span class="section-label">Client Testimonials</span>
+      <h2 class="section-title">What Our <span class="gold italic">Clients Say</span></h2>
+      <div class="gold-divider" style="margin:0.8rem auto 0;"></div>
+    </div>
+
+    <div class="testimonials-grid" style="margin-top:3rem;">
+
+      <div class="testimonial-card reveal delay-1">
+        <div class="t-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The Steel Grey granite we ordered for our villa flooring was absolutely perfect. The polish finish is flawless and delivery was on time.</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">R</div>
+          <div>
+            <div class="t-name">Ravi Kumar</div>
+            <div class="t-role">Real Estate Developer, Vijayawada</div>
+          </div>
         </div>
       </div>
+
+      <div class="testimonial-card reveal delay-2">
+        <div class="t-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Tiger Black with flaming finish transformed our commercial lobby into a showpiece. Competitive pricing and excellent quality.</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">P</div>
+          <div>
+            <div class="t-name">Priya Sharma</div>
+            <div class="t-role">Interior Designer, Hyderabad</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal delay-3">
+        <div class="t-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">We've been sourcing Black Pearl from them for years. Consistent quality, GST invoicing, and responsive communication every time.</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">M</div>
+          <div>
+            <div class="t-name">M. Suresh</div>
+            <div class="t-role">Construction Contractor, Guntur</div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="year">2026</span> GVR Granite &amp; Marbles. All rights reserved.</span>
-      <span>Uppamaguluru · Ballikurava · Andhra Pradesh</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER
+     ============================================================ -->
+<div class="cta-banner">
+  <h2 class="cta-banner-title">Ready to Source Premium Granite?</h2>
+  <p class="cta-banner-desc">Contact us today for pricing, samples, and bulk order enquiries.</p>
+  <div class="cta-banner-actions">
+    <a href="contact.html" class="btn-dark">
+      📋 Request a Quote
+    </a>
+    <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20your%20granite%20products." target="_blank" rel="noopener" class="btn-white">
+      💬 WhatsApp Us
+    </a>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-main">
+    <div>
+      <a href="index.html" class="nav-brand" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="nav-brand-icon">C</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Chamundeswari</span>
+          <span class="nav-brand-sub">Granite Industries</span>
+        </div>
+      </a>
+      <p class="footer-brand-desc">
+        Premium natural granite supplier in Andhra Pradesh. Supplying Steel Grey, Black Pearl, Tiger Black and more in Polish, Laputra, Leather, and Flaming finishes across India.
+      </p>
+      <div class="footer-socials">
+        <a href="tel:+916300346255" class="social-btn" title="Call Us" aria-label="Call">📞</a>
+        <a href="https://wa.me/916300346255" class="social-btn" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">💬</a>
+        <a href="mailto:sreeramreddy00@gmail.com" class="social-btn" title="Email" aria-label="Email">✉️</a>
+      </div>
     </div>
+
+    <div>
+      <h4 class="footer-col-title">Quick Links</h4>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div>
+      <h4 class="footer-col-title">Our Granites</h4>
+      <div class="footer-links">
+        <a href="products.html">Steel Grey</a>
+        <a href="products.html">Black Pearl</a>
+        <a href="products.html">Tiger Black</a>
+        <a href="products.html">Light Polish</a>
+        <a href="products.html">Dark Polish</a>
+        <a href="products.html">Laputra Finish</a>
+        <a href="products.html">Leather Finish</a>
+        <a href="products.html">Flaming Finish</a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="footer-col-title">Contact Info</h4>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📍</span>
+        <span>Murikipudi (Vil), Vemavaram Road, Chilakaluripet (Md.), A.P.</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span><a href="tel:+916300346255" style="color:inherit;">+91 6300346255</a><br/><a href="tel:+919892567833" style="color:inherit;">+91 9892567833</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">✉️</span>
+        <a href="mailto:sreeramreddy00@gmail.com" style="color:inherit;">sreeramreddy00@gmail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">🏷️</span>
+        <span>GSTIN: 37AAJFC9018K1Z3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2024 <span>Chamundeswari Granite Industries</span>. All rights reserved.</p>
+    <p class="footer-copy">Designed with ❤️ for quality stone</p>
   </div>
 </footer>
 
-<!-- floating whatsapp -->
-<a class="fab" href="https://wa.me/916300346255?text=Hello%20GVR%20Granite%20%26%20Marbles%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32" fill="#07331a" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.2c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.3 1.3-4.2-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5.3 9.8 10.1 5 16 5s10.7 4.8 10.7 10.5S21.9 25.7 16 25.7zm6-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.8.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.4-.6.1-.2 0-.5 0-.6 0-.2-.8-1.9-1-2.6-.3-.7-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.5 3.8 6 5.3 2.1.9 2.9.9 4 .8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg>
-</a>
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <span class="wa-tooltip">Chat with us</span>
+  <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20your%20granite%20products." target="_blank" rel="noopener" class="wa-btn" aria-label="Chat on WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- BACK TO TOP -->
+<button id="backToTop" title="Back to top" aria-label="Back to top" style="position:fixed;bottom:96px;right:28px;width:42px;height:42px;background:var(--slate);border:1px solid rgba(201,168,76,0.3);border-radius:50%;color:var(--gold);font-size:1.1rem;z-index:800;opacity:0;visibility:hidden;transition:var(--transition);display:flex;align-items:center;justify-content:center;cursor:pointer;">↑</button>
 
-<script src="script.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
