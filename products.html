@@ -1,179 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Products — Granite &amp; Marble Range | GVR Granite &amp; Marbles</title>
-<meta name="description" content="Browse the granite and marble range from GVR Granite & Marbles — Steel Gray, Black Pearl, Tan Brown, Black Galaxy, Kashmir White granite and Makrana, Green and Statuario marble." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Granite Products — Chamundeswari Granite Industries</title>
+  <meta name="description" content="Explore our full range of premium granites: Steel Grey, Black Pearl, Tiger Black, Light & Dark Polish, Laputra, Leather, and Flaming Finished from Andhra Pradesh."/>
+  <meta name="keywords" content="steel grey granite price, black pearl granite, tiger black granite, laputra granite, leather finish granite, flaming finish granite, Andhra Pradesh"/>
+  <link rel="canonical" href="https://chamundeswarigranite.com/products.html"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F0F1A'/><text y='24' x='4' font-size='22' font-weight='900' font-family='Georgia' fill='%23C9A84C'>C</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .filter-bar { display:flex; gap:0.7rem; flex-wrap:wrap; margin-bottom:2.5rem; justify-content:center; }
+    .filter-btn {
+      padding:9px 22px; border-radius:50px; font-size:0.78rem; font-weight:600; letter-spacing:0.1em;
+      text-transform:uppercase; border:1.5px solid rgba(201,168,76,0.3); color:var(--mist);
+      background:transparent; cursor:pointer; transition:var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background:var(--gold); color:var(--charcoal); border-color:var(--gold);
+    }
+    .product-detail-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; }
+    .product-detail-card {
+      background:var(--slate); border:1px solid rgba(255,255,255,0.06);
+      border-radius:var(--radius-lg); overflow:hidden; transition:var(--transition);
+    }
+    .product-detail-card:hover {
+      transform:translateY(-8px); border-color:rgba(201,168,76,0.25);
+      box-shadow:0 30px 60px rgba(0,0,0,0.4), var(--shadow-gold);
+    }
+    .product-detail-img { aspect-ratio:16/9; position:relative; overflow:hidden; }
+    .product-detail-body { padding:1.6rem; }
+    .product-specs { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; margin:1rem 0; }
+    .spec-item { background:rgba(255,255,255,0.04); border-radius:var(--radius-sm); padding:0.6rem 0.8rem; }
+    .spec-label { font-size:0.65rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); }
+    .spec-value { font-size:0.85rem; color:var(--white); font-weight:500; margin-top:2px; }
+    .enquire-btn {
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      width:100%; padding:12px; border-radius:var(--radius-md);
+      background:linear-gradient(135deg,var(--gold-dark),var(--gold));
+      color:var(--charcoal); font-weight:700; font-size:0.82rem;
+      letter-spacing:0.08em; text-transform:uppercase;
+      border:none; cursor:pointer; margin-top:1rem;
+      transition:var(--transition); text-decoration:none;
+    }
+    .enquire-btn:hover { transform:translateY(-2px); box-shadow:var(--shadow-gold); }
+    /* Modal */
+    .modal { position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.85); display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:var(--transition); padding:1rem; }
+    .modal.open { opacity:1; visibility:visible; }
+    .modal-box { background:var(--deep); border:1px solid rgba(201,168,76,0.2); border-radius:var(--radius-lg); padding:2.5rem; max-width:500px; width:100%; position:relative; }
+    .modal-close { position:absolute; top:1rem; right:1.2rem; background:none; color:var(--mist); font-size:1.4rem; cursor:pointer; transition:var(--transition); }
+    .modal-close:hover { color:var(--gold); }
+    .modal-title { font-family:var(--font-display); font-size:1.3rem; color:var(--white); margin-bottom:1.5rem; }
+  </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="GVR Granite and Marbles home">
-      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 40 40" width="38" height="38" fill="none"><rect x="2" y="2" width="36" height="36" rx="2" stroke="#c8202a" stroke-width="2"/><path d="M8 26 L20 8 L32 26 Z" fill="#c8202a" opacity="0.9"/><rect x="8" y="28" width="24" height="4" fill="#7d848e"/></svg></span>
-      <span class="brand__name">GV<span>R</span> Granite &amp; Marbles<span class="brand__sub">All Kinds of Granite &amp; Marble Supplier</span></span>
-    </a>
-    <button class="nav__toggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><span></span></button>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products.html" aria-current="page">Products</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a class="btn btn--wa btn--wa-mobile" href="https://wa.me/916300346255?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp Us</a></li>
-    </ul>
-    <div class="nav__cta"><a class="btn btn--wa" href="https://wa.me/916300346255?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">Get a Quote</a></div>
-  </div>
-</header>
+<div id="navOverlay" class="nav-overlay"></div>
 
-<section class="slab page-hero">
-  <div class="wrap">
-    <p class="eyebrow reveal">Our range</p>
-    <h1 class="h-display reveal">Granite &amp; marble for every surface.</h1>
-    <p class="lead reveal">Tap <em>Enquire</em> on any stone and we'll pre-fill a message with sizes, finish
-      and rate questions ready to send. Don't see what you need? Just ask — we supply all kinds.</p>
-  </div>
-</section>
-
-<!-- GRANITE -->
-<section class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">Granite</p>
-    <h2 class="h-section reveal">Hard-wearing, project-ready</h2>
-    <p class="lead reveal" style="margin-top:14px;">Our two signature granites lead the range, backed by reliable everyday favourites.</p>
-
-    <div class="grid grid--3 mt-l">
-      <article class="card reveal"><div class="swatch stone--steel-gray" role="img" aria-label="Steel Gray granite"></div><div class="card__body">
-        <span class="card__meta">Signature</span><h3 class="card__title" style="font-size:1.35rem;">Steel Gray Granite</h3>
-        <p class="card__text">Even mid-grey with fine speckle. The all-rounder for countertops, flooring and stairs.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Counters</li><li>Flooring</li><li>Stairs</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Steel Gray Granite">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal"><div class="swatch stone--black-pearl" role="img" aria-label="Black Pearl granite"></div><div class="card__body">
-        <span class="card__meta">Signature</span><h3 class="card__title" style="font-size:1.35rem;">Black Pearl Granite</h3>
-        <p class="card__text">Near-black with a pearly shimmer. Premium look for vanities, walls and elevations.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Vanity tops</li><li>Cladding</li><li>Feature walls</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Black Pearl Granite">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal"><div class="swatch stone--tan-brown" role="img" aria-label="Tan Brown granite"></div><div class="card__body">
-        <span class="card__meta">Granite</span><h3 class="card__title" style="font-size:1.35rem;">Tan Brown Granite</h3>
-        <p class="card__text">Warm browns and black with reddish flecks. Forgiving on stains, great for kitchens.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Kitchens</li><li>Outdoor</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Tan Brown Granite">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal"><div class="swatch stone--galaxy" role="img" aria-label="Black Galaxy granite"></div><div class="card__body">
-        <span class="card__meta">Granite</span><h3 class="card__title" style="font-size:1.35rem;">Black Galaxy Granite</h3>
-        <p class="card__text">Jet black scattered with gold flecks. A striking, high-end finish that polishes beautifully.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Counters</li><li>Lobbies</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Black Galaxy Granite">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal"><div class="swatch stone--kashmir-white" role="img" aria-label="Kashmir White granite"></div><div class="card__body">
-        <span class="card__meta">Granite</span><h3 class="card__title" style="font-size:1.35rem;">Kashmir White Granite</h3>
-        <p class="card__text">Light cream base with grey and burgundy specks. Bright, neutral, easy to design around.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Flooring</li><li>Counters</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Kashmir White Granite">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal" style="background:#f3f0ea;border-style:dashed;"><div class="card__body" style="justify-content:center;text-align:center;gap:14px;min-height:240px;">
-        <span class="card__meta">All kinds</span><h3 class="card__title" style="font-size:1.35rem;">Looking for another granite?</h3>
-        <p class="card__text">We stock and source well beyond this list. Tell us the name or send a photo.</p>
-        <div class="card__foot"><a class="btn btn--dark" href="contact.html">Ask us</a></div>
-      </div></article>
+<nav id="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">C</div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Chamundeswari</span>
+      <span class="nav-brand-sub">Granite Industries</span>
     </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="nav-cta">Get a Quote</a>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div id="navDrawer" class="nav-drawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="products.html">Our Products</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html" class="drawer-cta">Get a Quote →</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Products</span></div>
+  <h1 class="page-hero-title">Our <span style="color:var(--gold);font-style:italic;">Granite</span> Collection</h1>
+  <p class="page-hero-desc">Premium natural granite varieties in multiple finishes — sourced and crafted in Andhra Pradesh.</p>
 </section>
 
-<hr class="divider-cut" />
+<!-- PRODUCTS -->
+<section class="section" style="padding-top:3rem;">
 
-<!-- MARBLE -->
-<section class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">Marble</p>
-    <h2 class="h-section reveal">Soft light, fine veining</h2>
-    <p class="lead reveal" style="margin-top:14px;">For interiors that want warmth and a sense of luxury underfoot.</p>
-
-    <div class="grid grid--3 mt-l">
-      <article class="card reveal"><div class="swatch stone--makrana" role="img" aria-label="Makrana White marble"></div><div class="card__body">
-        <span class="card__meta">Marble</span><h3 class="card__title" style="font-size:1.35rem;">Makrana White Marble</h3>
-        <p class="card__text">Classic Indian white marble with soft veining. A timeless flooring and temple choice.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Flooring</li><li>Temples</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Makrana White Marble">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal"><div class="swatch stone--green" role="img" aria-label="Green marble"></div><div class="card__body">
-        <span class="card__meta">Marble</span><h3 class="card__title" style="font-size:1.35rem;">Green Marble</h3>
-        <p class="card__text">Deep green with white veining. Bold for feature floors, dados and table tops.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Feature floors</li><li>Tabletops</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Green Marble">Enquire</button></div>
-      </div></article>
-
-      <article class="card reveal"><div class="swatch stone--statuario" role="img" aria-label="Statuario marble"></div><div class="card__body">
-        <span class="card__meta">Marble</span><h3 class="card__title" style="font-size:1.35rem;">Statuario Marble</h3>
-        <p class="card__text">Bright white with crisp grey veins. An Italian-style look for premium interiors.</p>
-        <ul class="chips" style="margin:6px 0 4px;"><li>Interiors</li><li>Vanities</li></ul>
-        <div class="card__foot"><button class="btn" data-enquire="Statuario Marble">Enquire</button></div>
-      </div></article>
-    </div>
+  <div class="filter-bar reveal" role="group" aria-label="Filter products">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="granite">Granite Varieties</button>
+    <button class="filter-btn" data-filter="finish">Finishes</button>
   </div>
-</section>
 
-<!-- finishes -->
-<section class="slab section">
-  <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <p class="eyebrow">Finishes &amp; formats</p>
-        <h2 class="h-section" style="color:var(--marble);">Cut and finished<br>to your spec.</h2>
-        <p class="lead" style="color:var(--mist);margin-top:16px;">Every stone above is available in the formats your project needs.</p>
-        <a class="btn btn--wa mt-m" href="https://wa.me/916300346255?text=Hello%2C%20I%27d%20like%20to%20discuss%20finishes%20and%20sizes." target="_blank" rel="noopener">Discuss your spec</a>
+  <div class="product-detail-grid">
+
+    <!-- Steel Grey -->
+    <div class="product-detail-card reveal delay-1" data-category="granite">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#3A3A48"/>
+          <rect width="500" height="281" opacity="0.85"><filter><feTurbulence type="fractalNoise" baseFrequency="0.06 0.08" numOctaves="5" seed="1"/><feColorMatrix type="matrix" values="0 0 0 0 0.3 0 0 0 0 0.3 0 0 0 0 0.35 0 0 0 22 -9"/></filter></rect>
+          <path d="M0,100 Q125,75 250,115 T500,90" stroke="#C9A84C" stroke-width="0.7" fill="none" opacity="0.3"/>
+          <path d="M0,190 Q160,165 310,200 T500,175" stroke="#9A9AB0" stroke-width="0.5" fill="none" opacity="0.2"/>
+          <rect width="500" height="281" fill="#404050" opacity="0.25"/>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#C9A84C" opacity="0.7">STEEL GREY</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">ANDHRA PRADESH</text>
+        </svg>
+        <span class="product-badge" style="position:absolute;top:12px;right:12px;">Best Seller</span>
       </div>
-      <div class="reveal"><ul class="feature-list">
-        <li><span class="fnum">—</span><div><h4 style="color:var(--marble);">Slabs &amp; tiles</h4><p style="color:var(--mist);">Large slabs for counters and cladding, or tiles for flooring.</p></div></li>
-        <li><span class="fnum">—</span><div><h4 style="color:var(--marble);">Polished, honed or leathered</h4><p style="color:var(--mist);">Choose the surface finish that suits the room and the use.</p></div></li>
-        <li><span class="fnum">—</span><div><h4 style="color:var(--marble);">Custom sizes</h4><p style="color:var(--mist);">Cut to the dimensions on your drawing.</p></div></li>
-        <li><span class="fnum">—</span><div><h4 style="color:var(--marble);">Edge profiles</h4><p style="color:var(--mist);">Common counter and step edges available on request.</p></div></li>
-      </ul></div>
+      <div class="product-detail-body">
+        <div class="product-type">Natural Granite</div>
+        <h2 class="product-name">Steel Grey</h2>
+        <p class="product-desc">A classic grey granite with consistent tone and fine mineral crystals. Universally loved for flooring, wall cladding, stair treads, and kitchen countertops.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Origin</div><div class="spec-value">Andhra Pradesh</div></div>
+          <div class="spec-item"><div class="spec-label">Hardness</div><div class="spec-value">6–7 Mohs</div></div>
+          <div class="spec-item"><div class="spec-label">Applications</div><div class="spec-value">Flooring, Cladding</div></div>
+          <div class="spec-item"><div class="spec-label">Thickness</div><div class="spec-value">18mm, 20mm, 30mm</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Polish</span><span class="finish-tag">Leather</span><span class="finish-tag">Flaming</span><span class="finish-tag">Laputra</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Steel%20Grey%20granite.%20Please%20share%20pricing." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
     </div>
+
+    <!-- Black Pearl -->
+    <div class="product-detail-card reveal delay-2" data-category="granite">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#0E0E18"/>
+          <rect width="500" height="281" opacity="0.9"><filter><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="6" seed="7"/><feColorMatrix type="matrix" values="0 0 0 0 0.08 0 0 0 0 0.08 0 0 0 0 0.12 0 0 0 25 -11"/></filter></rect>
+          <circle cx="220" cy="130" r="2.5" fill="#E8C97A" opacity="0.7"/><circle cx="310" cy="80" r="1.8" fill="#E8C97A" opacity="0.6"/><circle cx="150" cy="190" r="2" fill="#C9A84C" opacity="0.6"/><circle cx="380" cy="150" r="1.5" fill="#E8C97A" opacity="0.5"/><circle cx="90" cy="110" r="1.2" fill="#C9A84C" opacity="0.5"/><circle cx="430" cy="60" r="1" fill="#E8C97A" opacity="0.4"/><circle cx="50" cy="200" r="1.4" fill="#C9A84C" opacity="0.4"/>
+          <rect width="500" height="281" fill="#080810" opacity="0.4"/>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#C9A84C" opacity="0.7">BLACK PEARL</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">LUXURY SERIES</text>
+        </svg>
+        <span class="product-badge" style="position:absolute;top:12px;right:12px;">Premium</span>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Natural Granite</div>
+        <h2 class="product-name">Black Pearl</h2>
+        <p class="product-desc">Deep jet black with golden and silver mineral inclusions that sparkle like stars. Perfect for luxury interiors, memorial stones, and feature walls.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Origin</div><div class="spec-value">Andhra Pradesh</div></div>
+          <div class="spec-item"><div class="spec-label">Hardness</div><div class="spec-value">6–7 Mohs</div></div>
+          <div class="spec-item"><div class="spec-label">Applications</div><div class="spec-value">Luxury, Monuments</div></div>
+          <div class="spec-item"><div class="spec-label">Thickness</div><div class="spec-value">18mm, 20mm, 30mm</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Mirror Polish</span><span class="finish-tag">Laputra</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Black%20Pearl%20granite.%20Please%20share%20pricing." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Tiger Black -->
+    <div class="product-detail-card reveal delay-3" data-category="granite">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#16120C"/>
+          <rect width="500" height="281" opacity="0.85"><filter><feTurbulence type="turbulence" baseFrequency="0.03 0.05" numOctaves="5" seed="15"/><feColorMatrix type="matrix" values="0 0 0 0 0.24 0 0 0 0 0.17 0 0 0 0 0.09 0 0 0 20 -8"/></filter></rect>
+          <path d="M0,70 Q100,45 200,85 T380,65 T500,75" stroke="#C9A84C" stroke-width="2" fill="none" opacity="0.5"/>
+          <path d="M0,160 Q80,130 190,170 T360,148 T500,158" stroke="#9A7A2E" stroke-width="1.2" fill="none" opacity="0.4"/>
+          <path d="M50,250 Q160,220 260,260 T460,238" stroke="#C9A84C" stroke-width="0.9" fill="none" opacity="0.35"/>
+          <rect width="500" height="281" fill="#16120C" opacity="0.35"/>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#C9A84C" opacity="0.7">TIGER BLACK</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">EXCLUSIVE SERIES</text>
+        </svg>
+        <span class="product-badge" style="position:absolute;top:12px;right:12px;">Exclusive</span>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Natural Granite</div>
+        <h2 class="product-name">Tiger Black</h2>
+        <p class="product-desc">Dramatic black stone with golden-brown tiger-stripe veining. Creates bold visual statements in lobbies, kitchens, and exterior cladding.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Origin</div><div class="spec-value">Andhra Pradesh</div></div>
+          <div class="spec-item"><div class="spec-label">Hardness</div><div class="spec-value">6–7 Mohs</div></div>
+          <div class="spec-item"><div class="spec-label">Applications</div><div class="spec-value">Feature walls, Flooring</div></div>
+          <div class="spec-item"><div class="spec-label">Thickness</div><div class="spec-value">18mm, 20mm</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Polish</span><span class="finish-tag">Flaming</span><span class="finish-tag">Leather</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Tiger%20Black%20granite.%20Please%20share%20pricing." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Light Polish -->
+    <div class="product-detail-card reveal delay-1" data-category="finish">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#4A4A5A"/>
+          <rect width="500" height="281" opacity="0.7"><filter><feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" seed="5"/><feColorMatrix type="matrix" values="0 0 0 0 0.4 0 0 0 0 0.4 0 0 0 0 0.45 0 0 0 18 -8"/></filter></rect>
+          <rect y="200" width="500" height="81" fill="white" opacity="0.08"/>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#E8E8F0" opacity="0.75">LIGHT POLISH</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">SMOOTH FINISH</text>
+        </svg>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Surface Finish</div>
+        <h2 class="product-name">Light Polish</h2>
+        <p class="product-desc">A satin-smooth finish with moderate sheen. Practical for high-traffic commercial flooring while maintaining elegance and easy maintenance.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Sheen</div><div class="spec-value">Satin / Medium</div></div>
+          <div class="spec-item"><div class="spec-label">Use</div><div class="spec-value">Commercial Floors</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Steel Grey</span><span class="finish-tag">Black Pearl</span><span class="finish-tag">Tiger Black</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Light%20Polish%20granite." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Dark Polish -->
+    <div class="product-detail-card reveal delay-2" data-category="finish">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#1A1A28"/>
+          <rect width="500" height="281" opacity="0.9"><filter><feTurbulence type="fractalNoise" baseFrequency="0.07 0.09" numOctaves="5" seed="9"/><feColorMatrix type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0.28 0 0 0 22 -10"/></filter></rect>
+          <defs><linearGradient id="mirrorGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.15"/><stop offset="30%" stop-color="white" stop-opacity="0.05"/><stop offset="100%" stop-color="white" stop-opacity="0"/></linearGradient></defs>
+          <rect width="500" height="281" fill="url(#mirrorGloss)"/>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#C9A84C" opacity="0.75">DARK POLISH</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">MIRROR FINISH</text>
+        </svg>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Surface Finish</div>
+        <h2 class="product-name">Dark Polish</h2>
+        <p class="product-desc">High-gloss mirror polish that brings out the deepest colors and crystal patterns in granite. Ideal for luxury interior surfaces and show kitchens.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Sheen</div><div class="spec-value">High Gloss / Mirror</div></div>
+          <div class="spec-item"><div class="spec-label">Use</div><div class="spec-value">Luxury Interiors</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Steel Grey</span><span class="finish-tag">Black Pearl</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Dark%20Polish%20granite." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Leather Finish -->
+    <div class="product-detail-card reveal delay-3" data-category="finish">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#2E2A24"/>
+          <rect width="500" height="281" opacity="0.9"><filter><feTurbulence type="fractalNoise" baseFrequency="0.15 0.2" numOctaves="3" seed="21"/><feColorMatrix type="matrix" values="0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 18 -8"/></filter></rect>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#C9A84C" opacity="0.7">LEATHER FINISH</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">TEXTURED SURFACE</text>
+        </svg>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Surface Finish</div>
+        <h2 class="product-name">Leather Finish</h2>
+        <p class="product-desc">A soft, tactile surface with a matte appearance that mimics aged leather. Slip-resistant and forgiving of fingerprints — great for outdoor and bathroom use.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Texture</div><div class="spec-value">Matte / Tactile</div></div>
+          <div class="spec-item"><div class="spec-label">Use</div><div class="spec-value">Bathrooms, Outdoor</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Steel Grey</span><span class="finish-tag">Tiger Black</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Leather%20Finish%20granite." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Laputra -->
+    <div class="product-detail-card reveal delay-4" data-category="finish">
+      <div class="product-detail-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#28282E"/>
+          <rect width="500" height="281" opacity="0.85"><filter><feTurbulence type="fractalNoise" baseFrequency="0.1 0.13" numOctaves="4" seed="17"/><feColorMatrix type="matrix" values="0 0 0 0 0.28 0 0 0 0 0.28 0 0 0 0 0.33 0 0 0 20 -9"/></filter></rect>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#C9A84C" opacity="0.7">LAPUTRA</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">HONED FINISH</text>
+        </svg>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Surface Finish</div>
+        <h2 class="product-name">Laputra Finish</h2>
+        <p class="product-desc">A refined honed finish with uniform smoothness and minimal reflectivity. Preferred for contemporary architecture and sophisticated matte aesthetics.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Texture</div><div class="spec-value">Smooth / Honed</div></div>
+          <div class="spec-item"><div class="spec-label">Use</div><div class="spec-value">Contemporary Design</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Black Pearl</span><span class="finish-tag">Steel Grey</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Laputra%20Finish%20granite." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Flaming Finish -->
+    <div class="product-detail-card reveal delay-5" data-category="finish">
+      <div class="product-detail-img">
+        <svg width="500" height="281" viewBox="0 0 500 281" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="281" fill="#221810"/>
+          <rect width="500" height="281" opacity="0.8"><filter><feTurbulence type="turbulence" baseFrequency="0.12 0.18" numOctaves="3" seed="30"/><feColorMatrix type="matrix" values="0 0 0 0 0.4 0 0 0 0 0.2 0 0 0 0 0.05 0 0 0 15 -7"/></filter></rect>
+          <text x="50%" y="48%" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#C9A84C" opacity="0.7">FLAMING FINISH</text>
+          <text x="50%" y="60%" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9A9AB0" opacity="0.6" letter-spacing="3">ROUGH TEXTURE</text>
+        </svg>
+      </div>
+      <div class="product-detail-body">
+        <div class="product-type">Surface Finish</div>
+        <h2 class="product-name">Flaming Finished</h2>
+        <p class="product-desc">Achieved by applying intense heat, creating a rough, non-slip surface ideal for exterior paving, pool surrounds, and driveways. Extremely durable.</p>
+        <div class="product-specs">
+          <div class="spec-item"><div class="spec-label">Texture</div><div class="spec-value">Rough / Non-slip</div></div>
+          <div class="spec-item"><div class="spec-label">Use</div><div class="spec-value">Exterior, Paving</div></div>
+        </div>
+        <div class="product-finishes"><span class="finish-tag">Steel Grey</span><span class="finish-tag">Tiger Black</span></div>
+        <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20Flaming%20Finish%20granite." target="_blank" rel="noopener" class="enquire-btn">💬 Enquire on WhatsApp</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- cta -->
-<section class="section">
-  <div class="wrap cta-band">
-    <p class="eyebrow center reveal">Get pricing</p>
-    <h2 class="h-section reveal" style="color:var(--charcoal);">Send your list, get a quote</h2>
-    <p class="lead reveal" style="color:var(--steel);">Tell us the stones, sizes and quantity. We'll reply with rates and availability.</p>
-    <div class="btnrow reveal" style="justify-content:center;">
-      <a class="btn btn--lg" href="contact.html">Open the enquiry form</a>
-      <a class="btn btn--wa btn--lg" href="https://wa.me/916300346255?text=Hello%2C%20here%20is%20my%20stone%20list%3A" target="_blank" rel="noopener">WhatsApp your list</a>
-    </div>
+<!-- CTA -->
+<div class="cta-banner">
+  <h2 class="cta-banner-title">Can't Find What You Need?</h2>
+  <p class="cta-banner-desc">We handle custom orders and bulk enquiries. Get in touch and we'll find the perfect stone for your project.</p>
+  <div class="cta-banner-actions">
+    <a href="contact.html" class="btn-dark">📋 Request Custom Quote</a>
+    <a href="https://wa.me/916300346255" target="_blank" rel="noopener" class="btn-white">💬 WhatsApp Us Now</a>
   </div>
-</section>
+</div>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div><div class="brand" style="margin-bottom:14px;"><span class="brand__name" style="font-size:1.3rem;">GV<span style="color:var(--garnet-bright);">R</span> Granite &amp; Marbles</span></div>
-        <p class="muted" style="max-width:38ch;">All kinds of granite and marble supplier. Specialists in Steel Gray &amp; Black Pearl granite, operating under Vikhyath Industries.</p>
-        <p class="gstin muted" style="margin-top:14px;">GSTIN: 37AXGPN9721Q1ZL</p></div>
-      <div><h4>Explore</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Contact</h4><div class="footer-contact"><div><strong>Ganji Vishnu Vardhan Reddy</strong><br>Proprietor</div><a href="tel:+916300346255">+91 6300 346 255</a><a href="mailto:vishnu.v.ganji@gmail.com">vishnu.v.ganji@gmail.com</a><div>C/o Vikhyath Industries,<br>Uppamaguluru, Ballikurava,<br>Andhra Pradesh – 523301</div></div></div>
+<footer>
+  <div class="footer-main">
+    <div>
+      <a href="index.html" class="nav-brand" style="display:inline-flex;margin-bottom:1rem;"><div class="nav-brand-icon">C</div><div class="nav-brand-text"><span class="nav-brand-name">Chamundeswari</span><span class="nav-brand-sub">Granite Industries</span></div></a>
+      <p class="footer-brand-desc">Premium granite supplier, Andhra Pradesh. GSTIN: 37AAJFC9018K1Z3</p>
     </div>
-    <div class="footer-bottom"><span>© <span id="year">2026</span> GVR Granite &amp; Marbles. All rights reserved.</span><span>Uppamaguluru · Ballikurava · Andhra Pradesh</span></div>
+    <div><h4 class="footer-col-title">Quick Links</h4><nav class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav></div>
+    <div><h4 class="footer-col-title">Products</h4><div class="footer-links"><a href="products.html">Steel Grey</a><a href="products.html">Black Pearl</a><a href="products.html">Tiger Black</a><a href="products.html">All Finishes</a></div></div>
+    <div><h4 class="footer-col-title">Contact</h4><div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>Murikipudi (Vil), Vemavaram Road, Chilakaluripet, A.P.</span></div><div class="footer-contact-item"><span class="footer-contact-icon">📞</span><span><a href="tel:+916300346255" style="color:inherit;">+91 6300346255</a></span></div><div class="footer-contact-item"><span class="footer-contact-icon">✉️</span><a href="mailto:sreeramreddy00@gmail.com" style="color:inherit;">sreeramreddy00@gmail.com</a></div></div>
   </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2024 <span>Chamundeswari Granite Industries</span>. All rights reserved.</p></div>
 </footer>
 
-<a class="fab" href="https://wa.me/916300346255?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="#07331a" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.2c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.3 1.3-4.2-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5.3 9.8 10.1 5 16 5s10.7 4.8 10.7 10.5S21.9 25.7 16 25.7zm6-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.8.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.4-.6.1-.2 0-.5 0-.6 0-.2-.8-1.9-1-2.6-.3-.7-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.5 3.8 6 5.3 2.1.9 2.9.9 4 .8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg></a>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="script.js"></script>
+<div class="wa-float">
+  <span class="wa-tooltip">Chat with us</span>
+  <a href="https://wa.me/916300346255?text=Hi%2C%20I%27m%20interested%20in%20your%20granite%20products." target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<button id="backToTop" title="Back to top" aria-label="Back to top" style="position:fixed;bottom:96px;right:28px;width:42px;height:42px;background:var(--slate);border:1px solid rgba(201,168,76,0.3);border-radius:50%;color:var(--gold);font-size:1.1rem;z-index:800;opacity:0;visibility:hidden;transition:var(--transition);display:flex;align-items:center;justify-content:center;cursor:pointer;">↑</button>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
